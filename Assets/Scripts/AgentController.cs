@@ -6,17 +6,32 @@ using UnityEngine.AI;
 
 public class AgentController : MonoBehaviour {
 
-	public Transform goal;
-	private NavMeshAgent agent;
-
-	void Start () {
-		agent = GetComponent<NavMeshAgent>();
-		agent.SetDestination(goal.position);
+	private Vector3 desiredPosition = new Vector3(0, 0, -20);
+	
+	void Start() {
+		NavMeshAgent nav = GetComponent<NavMeshAgent>();
+		NavMeshPath path = new NavMeshPath();
+		if (nav.CalculatePath(desiredPosition, path)) {
+			List<GameObject> pathPointList = new List<GameObject>();
+			foreach (Vector3 corner in path.corners) {
+				GameObject pathPoint = new GameObject();
+				pathPoint.GetComponent<Transform>().position = corner;
+				pathPointList.Add(pathPoint);
+			}
+		}
+		
 	}
 	
-	void Update () {
-		if (agent.remainingDistance < 2) {
-			agent.ResetPath();
-		}
+	void Update() {
+		
+	}
+
+	Vector3 CalculateMoveIncrement() {
+		
+		return Vector3.zero;
+	}
+
+	void UpdateDesiredPosition() {
+		
 	}
 }
