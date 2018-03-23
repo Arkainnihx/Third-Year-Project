@@ -3,16 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c38583ca-6bea-460d-8b0e-18cf75091023" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Third Year Project/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.Third Year Project/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Assets/Main Scene.meta" afterPath="$PROJECT_DIR$/Assets/Main Scene.meta" />
-      <change beforePath="$PROJECT_DIR$/Assets/Main Scene/Main Scene.meta" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Assets/Main Scene/Main Scene.unity" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Assets/Main Scene/Main Scene.unity.meta" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Assets/Main Scene/Main Scene/NavMesh.asset" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Assets/Main Scene/Main Scene/NavMesh.asset.meta" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Assets/Main Scene/NavMesh.asset" afterPath="$PROJECT_DIR$/Assets/Main Scene/NavMesh.asset" />
-      <change beforePath="$PROJECT_DIR$/Assets/Main Scene/NavMesh.asset.meta" afterPath="$PROJECT_DIR$/Assets/Main Scene/NavMesh.asset.meta" />
+      <change beforePath="$PROJECT_DIR$/Assets/Main Scene.unity" afterPath="$PROJECT_DIR$/Assets/Main Scene.unity" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Agent.prefab" afterPath="$PROJECT_DIR$/Assets/Prefabs/Agent.prefab" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AgentController.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/AgentController.cs" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,21 +16,23 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="AgentController.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/AgentController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="18" column="43" lean-forward="false" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+            <state relative-caret-position="660">
+              <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
               <folding>
-                <marker date="1521585775960" expanded="false" signature="6:138" ph="..." />
-                <marker date="1521585775960" expanded="true" signature="185:796" ph="{...}" />
-                <marker date="1521585775960" expanded="true" signature="263:664" ph="{...}" />
-                <marker date="1521585775960" expanded="true" signature="404:658" ph="{...}" />
-                <marker date="1521585775960" expanded="true" signature="510:654" ph="{...}" />
-                <marker date="1521585775960" expanded="true" signature="682:689" ph="{...}" />
-                <marker date="1521585775960" expanded="true" signature="725:755" ph="{...}" />
-                <marker date="1521585775960" expanded="true" signature="787:794" ph="{...}" />
+                <marker date="1521764014544" expanded="true" signature="6:138" ph="..." />
+                <marker date="1521764014544" expanded="true" signature="185:973" ph="{...}" />
+                <marker date="1521764014544" expanded="true" signature="394:461" ph="{...}" />
+                <marker date="1521764014544" expanded="true" signature="479:486" ph="{...}" />
+                <marker date="1521764014544" expanded="true" signature="516:720" ph="{...}" />
+                <marker date="1521764014544" expanded="true" signature="600:691" ph="{...}" />
+                <marker date="1521764014544" expanded="true" signature="756:823" ph="{...}" />
+                <marker date="1521764014544" expanded="true" signature="856:863" ph="{...}" />
+                <marker date="1521764014544" expanded="true" signature="894:914" ph="{...}" />
+                <marker date="1521764014544" expanded="true" signature="939:969" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -44,11 +40,17 @@
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Ray</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AgentController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/73F4CCE3-51A9-454B-85BA-2899CA601133/b8/1534598a/NavMeshAgent.cs" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -78,6 +80,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="SolutionExplorer">
         <subPane>
           <expand>
@@ -91,11 +94,11 @@
         <option name="show-file-system" value="false" />
         <option name="show-all-items" value="false" />
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -125,11 +128,14 @@
       <workItem from="1521232302719" duration="4215000" />
       <workItem from="1521293106707" duration="1401000" />
       <workItem from="1521548162668" duration="9445000" />
+      <workItem from="1521644403806" duration="6542000" />
+      <workItem from="1521738493620" duration="375000" />
+      <workItem from="1521738895874" duration="2778000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15061000" />
+    <option name="totallyTimeSpent" value="24756000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -163,6 +169,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991612" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -177,17 +184,84 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/AgentController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="18" column="43" lean-forward="false" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1521585775960" expanded="false" signature="6:138" ph="..." />
-            <marker date="1521585775960" expanded="true" signature="185:796" ph="{...}" />
-            <marker date="1521585775960" expanded="true" signature="263:664" ph="{...}" />
-            <marker date="1521585775960" expanded="true" signature="404:658" ph="{...}" />
-            <marker date="1521585775960" expanded="true" signature="510:654" ph="{...}" />
-            <marker date="1521585775960" expanded="true" signature="682:689" ph="{...}" />
-            <marker date="1521585775960" expanded="true" signature="725:755" ph="{...}" />
-            <marker date="1521585775960" expanded="true" signature="787:794" ph="{...}" />
+            <marker date="1521764014544" expanded="true" signature="6:138" ph="..." />
+            <marker date="1521764014544" expanded="true" signature="185:973" ph="{...}" />
+            <marker date="1521764014544" expanded="true" signature="394:461" ph="{...}" />
+            <marker date="1521764014544" expanded="true" signature="479:486" ph="{...}" />
+            <marker date="1521764014544" expanded="true" signature="516:720" ph="{...}" />
+            <marker date="1521764014544" expanded="true" signature="600:691" ph="{...}" />
+            <marker date="1521764014544" expanded="true" signature="756:823" ph="{...}" />
+            <marker date="1521764014544" expanded="true" signature="856:863" ph="{...}" />
+            <marker date="1521764014544" expanded="true" signature="894:914" ph="{...}" />
+            <marker date="1521764014544" expanded="true" signature="939:969" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/AgentController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1521764014544" expanded="true" signature="6:138" ph="..." />
+            <marker date="1521764014544" expanded="true" signature="185:973" ph="{...}" />
+            <marker date="1521764014544" expanded="true" signature="394:461" ph="{...}" />
+            <marker date="1521764014544" expanded="true" signature="479:486" ph="{...}" />
+            <marker date="1521764014544" expanded="true" signature="516:720" ph="{...}" />
+            <marker date="1521764014544" expanded="true" signature="600:691" ph="{...}" />
+            <marker date="1521764014544" expanded="true" signature="756:823" ph="{...}" />
+            <marker date="1521764014544" expanded="true" signature="856:863" ph="{...}" />
+            <marker date="1521764014544" expanded="true" signature="894:914" ph="{...}" />
+            <marker date="1521764014544" expanded="true" signature="939:969" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/AgentController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1521764014544" expanded="true" signature="6:138" ph="..." />
+            <marker date="1521764014544" expanded="true" signature="185:973" ph="{...}" />
+            <marker date="1521764014544" expanded="true" signature="394:461" ph="{...}" />
+            <marker date="1521764014544" expanded="true" signature="479:486" ph="{...}" />
+            <marker date="1521764014544" expanded="true" signature="516:720" ph="{...}" />
+            <marker date="1521764014544" expanded="true" signature="600:691" ph="{...}" />
+            <marker date="1521764014544" expanded="true" signature="756:823" ph="{...}" />
+            <marker date="1521764014544" expanded="true" signature="856:863" ph="{...}" />
+            <marker date="1521764014544" expanded="true" signature="894:914" ph="{...}" />
+            <marker date="1521764014544" expanded="true" signature="939:969" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/73F4CCE3-51A9-454B-85BA-2899CA601133/b8/1534598a/NavMeshAgent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="366" column="27" lean-forward="false" selection-start-line="366" selection-start-column="27" selection-end-line="366" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/AgentController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding>
+            <marker date="1521764014544" expanded="true" signature="6:138" ph="..." />
+            <marker date="1521764014544" expanded="true" signature="185:973" ph="{...}" />
+            <marker date="1521764014544" expanded="true" signature="394:461" ph="{...}" />
+            <marker date="1521764014544" expanded="true" signature="479:486" ph="{...}" />
+            <marker date="1521764014544" expanded="true" signature="516:720" ph="{...}" />
+            <marker date="1521764014544" expanded="true" signature="600:691" ph="{...}" />
+            <marker date="1521764014544" expanded="true" signature="756:823" ph="{...}" />
+            <marker date="1521764014544" expanded="true" signature="856:863" ph="{...}" />
+            <marker date="1521764014544" expanded="true" signature="894:914" ph="{...}" />
+            <marker date="1521764014544" expanded="true" signature="939:969" ph="{...}" />
           </folding>
         </state>
       </provider>
