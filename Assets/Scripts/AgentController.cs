@@ -5,50 +5,44 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class AgentController : MonoBehaviour {
+    private Vector3 endPosition = new Vector3(0, 0, -20);
+    private Vector3 desiredPosition;
+    private Vector2 desiredVelocity = Vector2.zero;
+    private NavMeshAgent nav;
+    private List<NavMeshPath> exitPathList;
 
-	private Vector3 endPosition = new Vector3(0, 0, -20);
-	private Vector3 desiredPosition;
-	private Vector2 desiredVelocity = Vector2.zero;
-	private NavMeshAgent nav;
-	private Vector3[] path;
-	
-	void Start() {
-		nav = GetComponent<NavMeshAgent>();
-		GenerateInitialPath();
-	}
-	
-	void Update() {
-		
-	}
+    void Start() {
+        nav = GetComponent<NavMeshAgent>();
+        GenerateInitialPath();
+    }
 
-	bool GenerateInitialPath() {
-		var newPath = new NavMeshPath();
-		if (nav.CalculatePath(endPosition, newPath)) {
-			path = newPath.corners;
-			var test = new List<Vector3>();
-			test.AddRange(path);
-		}
-		return path.Length > 0;
-	}
+    void Update() {
+    }
 
-	Vector2 CalculateMoveIncrement() {
-		var moveIncrement = Vector2.zero;
-		
-		return moveIncrement;
-	}
-	
-	void UpdateDesiredPosition() {
-		
-	}
+    bool GenerateInitialPath() {
+        var newPath = new NavMeshPath();
+        if (nav.CalculatePath(endPosition, newPath)) {
+            exitPathList.Add(newPath);
+        }
+        return newPath.status == NavMeshPathStatus.PathComplete;
+    }
 
-	bool isNewPositionDesired() {
+    Vector2 CalculateMoveIncrement() {
+        var moveIncrement = Vector2.zero;
 
-		return true;
-	}
+        return moveIncrement;
+    }
 
-	Vector2 SocialForce() {
-		
-		return Vector2.zero;
-	}
-	
+    void UpdateDesiredPosition() {
+        
+    }
+
+    bool isNewPositionDesired() {
+        
+        return true;
+    }
+
+    Vector2 SocialForce() {
+        return Vector2.zero;
+    }
 }
