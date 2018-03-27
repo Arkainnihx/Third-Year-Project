@@ -5,44 +5,12 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class AgentController : MonoBehaviour {
-    private Vector3 endPosition = new Vector3(0, 0, -20);
-    private Vector3 desiredPosition;
-    private Vector2 desiredVelocity = Vector2.zero;
-    private NavMeshAgent nav;
-    private List<NavMeshPath> exitPathList;
 
     void Start() {
-        nav = GetComponent<NavMeshAgent>();
-        GenerateInitialPath();
+
     }
 
     void Update() {
     }
 
-    bool GenerateInitialPath() {
-        var newPath = new NavMeshPath();
-        if (nav.CalculatePath(endPosition, newPath)) {
-            exitPathList.Add(newPath);
-        }
-        return newPath.status == NavMeshPathStatus.PathComplete;
-    }
-
-    Vector2 CalculateMoveIncrement() {
-        var moveIncrement = Vector2.zero;
-
-        return moveIncrement;
-    }
-
-    void UpdateDesiredPosition() {
-        
-    }
-
-    bool isNewPositionDesired() {
-        
-        return true;
-    }
-
-    Vector2 SocialForce() {
-        return Vector2.zero;
-    }
 }

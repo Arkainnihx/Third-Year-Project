@@ -14,6 +14,8 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="AgentController.cs" t="Include" />
+          <e p="MapController.cs" t="Include" />
+          <e p="MapNodeController.cs" t="Include" />
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />
