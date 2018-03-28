@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Public\Documents\Unity Projects\Third-Year-Project" t="IncludeRecursive">
+    <e p="C:\Users\IEUser\.Rider2017.3\system\resharper-host\local\Transient\ReSharperHost\v11\SolutionCaches\_Third-Year-Project.1347856656.00" t="ExcludeRecursive" />
+    <e p="C:\Users\IEUser\Documents\Third-Year-Project" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -14,6 +15,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="AgentController.cs" t="Include" />
+          <e p="GraphSetupController.cs" t="Include" />
           <e p="MapController.cs" t="Include" />
           <e p="MapNodeController.cs" t="Include" />
         </e>
@@ -26,6 +28,5 @@
       </e>
       <e p="Third-Year-Project.sln" t="IncludeFlat" />
     </e>
-    <e p="C:\Users\User Two\.Rider2017.3\system\resharper-host\local\Transient\ReSharperHost\v11\SolutionCaches\_Third-Year-Project.1460524221.00" t="ExcludeRecursive" />
   </component>
 </project>
