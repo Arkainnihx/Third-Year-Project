@@ -9,30 +9,31 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1885911634757442}
+  m_RootGameObject: {fileID: 1741987835949312}
   m_IsPrefabParent: 1
---- !u!1 &1885911634757442
+--- !u!1 &1741987835949312
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4888350183742016}
-  - component: {fileID: 114187690816625698}
+  - component: {fileID: 4289398048589588}
+  - component: {fileID: 208832762240049308}
+  - component: {fileID: 65192356949312238}
   m_Layer: 0
-  m_Name: Graph Setup Controller
+  m_Name: Node Obstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4888350183742016
+--- !u!4 &4289398048589588
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1885911634757442}
+  m_GameObject: {fileID: 1741987835949312}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -40,16 +41,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114187690816625698
-MonoBehaviour:
+--- !u!65 &65192356949312238
+BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1885911634757442}
+  m_GameObject: {fileID: 1741987835949312}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 408a12ad9b76dd24a855cfd158a04a11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mapNode: {fileID: 1635062426141452, guid: 5e9e51873a1e781459f9389a1686bd21, type: 2}
-  obstacle: {fileID: 1741987835949312, guid: bb96319e9733649488921daa75aee355, type: 2}
+  serializedVersion: 2
+  m_Size: {x: 3, y: 0.2, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!208 &208832762240049308
+NavMeshObstacle:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1741987835949312}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.5, y: 0.1, z: 0.1}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5

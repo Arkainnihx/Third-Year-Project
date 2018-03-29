@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 33295526490153492}
   - component: {fileID: 23495695651700314}
   - component: {fileID: 195261872453802460}
-  - component: {fileID: 208533300522492526}
   - component: {fileID: 114628655442128378}
   m_Layer: 0
   m_Name: Map Node
@@ -50,7 +49,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1635062426141452}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -96,13 +95,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87636181216ffb243ba82381e71a2241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isExitNode: 0
 --- !u!195 &195261872453802460
 NavMeshAgent:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1635062426141452}
-  m_Enabled: 0
+  m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 0
@@ -117,18 +117,3 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 0
---- !u!208 &208533300522492526
-NavMeshObstacle:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1635062426141452}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 1, y: 0.5, z: 0.1}
-  m_MoveThreshold: 0.1
-  m_Carve: 1
-  m_CarveOnlyStationary: 0
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
