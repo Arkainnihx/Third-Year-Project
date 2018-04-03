@@ -1,15 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Security.Permissions;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
 public class MapNodeController : MonoBehaviour {
     
     private List<GameObject> connectedNodeList = new List<GameObject>();
-    public bool isExitNode = false;
-
-    void Start() {
+    private bool isExitNode;
+    public bool IsExitNode {
+        get { return isExitNode; }
+        private set { isExitNode = value; }
+    }
+    
+    private void Start() {
         ExitNodeCheck();
     }
 
@@ -25,7 +26,7 @@ public class MapNodeController : MonoBehaviour {
         }
     }
 
-    public List<GameObject> GetConnectedNodeList() {
+    public IEnumerable<GameObject> GetConnectedNodeList() {
         return connectedNodeList;
     }
 

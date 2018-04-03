@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.Remoting.Messaging;
-using NUnit.Framework.Internal;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -11,12 +8,11 @@ public class GraphSetupController : MonoBehaviour {
 	public GameObject obstacle;
 
 	private MapController mapController;
-	private bool isMapGraphComplete = false;
-	private bool frameDelay = false;
+	private bool frameDelay;
 	private List<GameObject> mapNodeList = new List<GameObject>();
 	private List<GameObject> obstacleList = new List<GameObject>();
 	
-	void Start() {
+	private void Start() {
 		mapController = gameObject.GetComponentInParent<MapController>();
 		GenerateMapNodesAndObstacles();
 	}
@@ -27,13 +23,13 @@ public class GraphSetupController : MonoBehaviour {
 		} else {
 			ConnectMapNodes();
 			DestroyObstacles();
-			print("There are " + ExitNodeCount().ToString() + " exit nodes.");
-			mapController.SetNodeList(mapNodeList);
+			print("Exit Nodes: " + ExitNodeCount());
+			mapController.AddToNodeList(mapNodeList);
 			Destroy(gameObject);
 		}
 	}
 
-	void GenerateMapNodesAndObstacles() {
+	private void GenerateMapNodesAndObstacles() {
 		foreach (var door in GameObject.FindGameObjectsWithTag("Door")) {
 			var frontNode = Instantiate(mapNode, door.transform);
 			var backNode = Instantiate(mapNode, door.transform);
@@ -48,7 +44,7 @@ public class GraphSetupController : MonoBehaviour {
 		}
 	}
 
-	void ConnectMapNodes() {
+	private void ConnectMapNodes() {
 		foreach (var node in mapNodeList) {
 			var untestedNodes = GetUnconnectedNodeList(node);
 			while (untestedNodes.Count > 0) {
@@ -72,10 +68,9 @@ public class GraphSetupController : MonoBehaviour {
 				}
 			}
 		}
-		isMapGraphComplete = true;
 	}
 	
-	void DestroyObstacles() {
+	private void DestroyObstacles() {
 		foreach (var ob in obstacleList) {
 			Destroy(ob);
 		}
@@ -101,7 +96,7 @@ public class GraphSetupController : MonoBehaviour {
 	private int ExitNodeCount() {
 		var exitNodes = 0;
 		foreach (var node in mapNodeList) {
-			if (node.GetComponent<MapNodeController>().isExitNode) {
+			if (node.GetComponent<MapNodeController>().IsExitNode) {
 				exitNodes++;
 			}
 		}
