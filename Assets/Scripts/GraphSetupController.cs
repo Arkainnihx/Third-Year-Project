@@ -9,7 +9,7 @@ public class GraphSetupController : MonoBehaviour {
 
 	private MapController mapController;
 	private bool frameDelay;
-	private List<GameObject> mapNodeList = new List<GameObject>();
+	private MapGraph mapGraph = new MapGraph();
 	private List<GameObject> obstacleList = new List<GameObject>();
 	
 	private void Start() {
@@ -24,7 +24,7 @@ public class GraphSetupController : MonoBehaviour {
 			ConnectMapNodes();
 			DestroyObstacles();
 			print("Exit Nodes: " + ExitNodeCount());
-			mapController.AddToNodeList(mapNodeList);
+			mapController.AddToNodeList(mapGraph);
 			Destroy(gameObject);
 		}
 	}
@@ -38,14 +38,14 @@ public class GraphSetupController : MonoBehaviour {
 			backNode.transform.Translate(Vector3.back*0.6f);
 			frontNode.GetComponent<MapNodeController>().AddEdge(backNode);
 			backNode.GetComponent<MapNodeController>().AddEdge(frontNode);
-			mapNodeList.Add(frontNode);
-			mapNodeList.Add(backNode);
+			mapGraph.Add(frontNode);
+			mapGraph.Add(backNode);
 			obstacleList.Add(ob);
 		}
 	}
 
 	private void ConnectMapNodes() {
-		foreach (var node in mapNodeList) {
+		foreach (var node in mapGraph) {
 			var untestedNodes = GetUnconnectedNodeList(node);
 			while (untestedNodes.Count > 0) {
 				var nodeToTest = untestedNodes[untestedNodes.Count-1];
@@ -85,7 +85,7 @@ public class GraphSetupController : MonoBehaviour {
 	}
 	
 	private List<GameObject> GetUnconnectedNodeList(GameObject node) {
-		var unconnectedNodeList = new List<GameObject>(mapNodeList);
+		var unconnectedNodeList = new List<GameObject>(mapGraph);
 		unconnectedNodeList.Remove(node);
 		foreach (var connectedNode in node.GetComponent<MapNodeController>().GetConnectedNodeList()) {
 			unconnectedNodeList.Remove(connectedNode);
@@ -95,7 +95,7 @@ public class GraphSetupController : MonoBehaviour {
 
 	private int ExitNodeCount() {
 		var exitNodes = 0;
-		foreach (var node in mapNodeList) {
+		foreach (var node in mapGraph) {
 			if (node.GetComponent<MapNodeController>().IsExitNode) {
 				exitNodes++;
 			}

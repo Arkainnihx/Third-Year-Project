@@ -26,13 +26,13 @@
     public PopulationSpec(int popSize) {
         this.popSize = popSize;
         panicMultMin = 0f;
-        panicMultMax = 0;
-        maxSpeedMin = 1;
-        maxSpeedMax = 1;
-        cautionMin = 1;
-        cautionMax = 1;
-        awarenessMin = 1;
-        awarenessMax = 1;
+        panicMultMax = 0f;
+        maxSpeedMin = 1f;
+        maxSpeedMax = 1f;
+        cautionMin = 1f;
+        cautionMax = 1f;
+        awarenessMin = 1f;
+        awarenessMax = 1f;
     }
 
     public int PopSize {

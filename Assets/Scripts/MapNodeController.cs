@@ -16,14 +16,14 @@ public class MapNodeController : MonoBehaviour {
 
     public void AddEdge(GameObject node) {
         connectedNodeList.Add(node);
-        Debug.DrawLine(gameObject.transform.position, node.transform.position, Color.blue, 60f, false);
+//        Debug.DrawLine(gameObject.transform.position, node.transform.position, Color.blue, 60f, false);
     }
 
     public void AddEdges(IEnumerable<GameObject> nodes) {
         connectedNodeList.AddRange(nodes);
-        foreach (var node in nodes) {
-            Debug.DrawLine(gameObject.transform.position, node.transform.position, Color.blue, 60f, false);
-        }
+//        foreach (var node in nodes) {
+//            Debug.DrawLine(gameObject.transform.position, node.transform.position, Color.blue, 60f, false);
+//        }
     }
 
     public IEnumerable<GameObject> GetConnectedNodeList() {

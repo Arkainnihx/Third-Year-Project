@@ -15,6 +15,12 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="AgentController.cs" t="Include" />
+          <e p="AgentGenerator.cs" t="Include" />
+          <e p="GraphSetupController.cs" t="Include" />
+          <e p="MapController.cs" t="Include" />
+          <e p="MapGraph.cs" t="Include" />
+          <e p="MapNodeController.cs" t="Include" />
+          <e p="PopulationSpec.cs" t="Include" />
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />

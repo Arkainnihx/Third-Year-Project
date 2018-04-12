@@ -10,7 +10,7 @@ public class MapController : MonoBehaviour {
 	public GameObject graphSetupPrefab;
 	public GameObject agentGeneratorPrefab;
 
-	private List<GameObject> nodeList = new List<GameObject>();
+	private MapGraph nodeList = new MapGraph();
 	private List<GameObject> agentList = new List<GameObject>();
 
 	private void Start() {
@@ -47,7 +47,7 @@ public class MapController : MonoBehaviour {
 		}
 	}
 	
-	public void AddToNodeList(List<GameObject> nodeList) {
+	public void AddToNodeList(MapGraph nodeList) {
 		this.nodeList.AddRange(nodeList);
 	}
 
@@ -61,7 +61,6 @@ public class MapController : MonoBehaviour {
 			var agentController = agent.GetComponent<AgentController>();
 			if (agentController.IsMapKnowledgeRequested) {
 				agentController.ReceiveMapKnowledge(nodeList);
-				agentController.IsMapKnowledgeRequested = false;
 			}
 		}
 	}
