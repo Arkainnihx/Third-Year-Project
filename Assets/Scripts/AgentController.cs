@@ -17,14 +17,16 @@ public class AgentController : MonoBehaviour {
         get { return desiredPath.corners[pathIndex]; }
     }
 
+    public bool IsAlive { get; set; }
     public bool IsMapKnowledgeRequested { get; set; }
     public float MaxSpeed { get; set; }
     public float PanicMult { get; set; }
     public float Caution { get; set; }
 
     private void Start() {
+        IsAlive = true;
         nav = gameObject.GetComponent<NavMeshAgent>();
-        InvokeRepeating("UpdateDesiredPoint", 0.1f, 0.2f);
+        StartCoroutine(UpdateDesiredPoint());
     }
 
     private  void FixedUpdate() {
@@ -58,30 +60,43 @@ public class AgentController : MonoBehaviour {
             nav.CalculatePath(mapKnowledge.GetExitNodes()[0].transform.position, path);
             nav.enabled = false;
             desiredPath = path;
-            Debug.DrawLine(gameObject.transform.position, path.corners[0], Color.blue, 60f, false);
-            for (var pointCount = 1; pointCount < path.corners.Length; pointCount++) {
-                Debug.DrawLine(path.corners[pointCount - 1], path.corners[pointCount], Color.blue, 60f, false);
-            }
+//            Debug.DrawLine(gameObject.transform.position, path.corners[0], Color.blue, 60f, false);
+//            for (var pointCount = 1; pointCount < path.corners.Length; pointCount++) {
+//                Debug.DrawLine(path.corners[pointCount - 1], path.corners[pointCount], Color.blue, 60f, false);
+//            }
             return true;
         }
         return false;
     }
 
-    private void UpdateDesiredPoint() {
-        var hit = new NavMeshHit();
-        nav.enabled = true;
-        if (pathIndex < desiredPath.corners.Length - 1) {
-            if (!nav.Raycast(desiredPath.corners[pathIndex + 1], out hit)) {
-                Debug.DrawLine(gameObject.transform.position, desiredPath.corners[pathIndex + 1], Color.magenta, 1f, false);
-                pathIndex++;
+    private IEnumerator UpdateDesiredPoint() {
+        yield return new WaitForSeconds(0.2f);
+        var failCount = 0;
+        while (IsAlive) {
+            var hit = new NavMeshHit();
+            nav.enabled = true;
+            if (pathIndex < desiredPath.corners.Length - 1) {
+//                if (Vector3.Distance(gameObject.transform.position, desiredPosition) < 0.25f) {
+//                    pathIndex++;
+//                }
+                if (!nav.Raycast(desiredPath.corners[pathIndex + 1], out hit)) {
+//                    Debug.DrawLine(gameObject.transform.position, desiredPath.corners[pathIndex + 1], Color.magenta, 1f, false);
+                    pathIndex++;
+                }
+                if (nav.Raycast(desiredPath.corners[pathIndex], out hit)) {
+                    failCount++;
+                } else {
+                    failCount = 0;
+                }
+                if (failCount > 2) {
+                    pathIndex--;
+                    failCount = 0;
+                }
             }
-            if (nav.Raycast(desiredPath.corners[pathIndex], out hit)) {
-                Debug.DrawLine(gameObject.transform.position, desiredPath.corners[pathIndex], Color.cyan, 1f, false);
-                pathIndex--;
-            }
+            nav.enabled = false;
+            Debug.Log(failCount);
+            yield return new WaitForSeconds(0.2f);
         }
-        nav.enabled = false;
-        Debug.Log(desiredPosition);
     }
     
     private void RequestMapKnowledge() {
